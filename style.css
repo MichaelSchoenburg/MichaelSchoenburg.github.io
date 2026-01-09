@@ -1,3 +1,99 @@
+:root {
+    --navy: #002e77; /* Basierend auf deinem Logo */
+    --gold: #d4af37; /* Goldener Akzent */
+    --white: #ffffff;
+    --text: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    background-color: var(--white);
+}
+
+header {
+    background: var(--white);
+    border-bottom: 3px solid var(--navy);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img { height: 60px; }
+
+nav a {
+    color: var(--navy);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5%;
+    gap: 40px;
+}
+
+.hero-text { flex: 2; }
+.hero-image { flex: 1; }
+.hero-image img {
+    width: 100%;
+    border-radius: 5px;
+    border-bottom: 5px solid var(--gold);
+}
+
+h1, h2 { color: var(--navy); }
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem 5%;
+    background: #f9f9f9;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-left: 5px solid var(--gold);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.certs {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.cert-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.cert-icons img { height: 80px; transition: 0.3s; }
+.cert-icons img:hover { filter: grayscale(0%); opacity: 1; }
+
+footer {
+    background: var(--navy);
+    color: white;
+    padding: 2rem 5%;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; }
+}
+
 /* Zusätzliche Stile für Case Studies & Expertise */
 .case-studies {
     padding: 4rem 5%;
